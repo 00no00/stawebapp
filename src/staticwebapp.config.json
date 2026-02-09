@@ -9,5 +9,14 @@
       "allowedForwardedHosts": [
         "shtfded-ejhnfdame6fhg5gc.b01.azurefd.net","shotanakano.com"
       ]
-    }
+    },
+    "routes": [
+        {
+            "route": "/",
+            "allowedRoles": ["authenticated", "members"],
+            "headers": {
+                "Cache-Control": "no-store"
+            }
+        }
+    ]
 }
