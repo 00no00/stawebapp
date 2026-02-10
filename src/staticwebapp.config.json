@@ -9,5 +9,14 @@
       "allowedForwardedHosts": [
         "shtfded-ejhnfdame6fhg5gc.b01.azurefd.net"
       ]
-    }
+    },
+    "routes": [
+        {
+            "route": "/members",
+            "allowedRoles": ["authenticated", "members"],
+            "headers": {
+                "Cache-Control": "no-store"
+            }
+        }
+    ]
 }
