@@ -1,14 +1,5 @@
 {
     "networking":{
       "allowedIpRanges":["AzureFrontDoor.Backend"]
-    },
-    "routes": [
-        {
-            "route": "/",
-            "allowedRoles": ["authenticated", "members"],
-            "headers": {
-                "Cache-Control": "no-store"
-            }
-        }
-    ]
+    }
 }
