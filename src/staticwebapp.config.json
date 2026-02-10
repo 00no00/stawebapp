@@ -3,6 +3,9 @@
       "allowedIpRanges":["AzureFrontDoor.Backend"]
     },
     "forwardingGateway": {
+      "requiredHeaders": {
+        "X-Azure-FDID" : "de2b4435-3f33-4deb-a323-66dd473fb4b2"
+      },
       "allowedForwardedHosts": [
         "shtfded-ejhnfdame6fhg5gc.b01.azurefd.net"
       ]
