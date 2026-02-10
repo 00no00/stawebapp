@@ -1,4 +1,7 @@
 {
+    "networking":{
+      "allowedIpRanges":["AzureFrontDoor.Backend"]
+    },
     "forwardingGateway": {
       "allowedForwardedHosts": [
         "shtfded-ejhnfdame6fhg5gc.b01.azurefd.net"
