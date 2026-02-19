@@ -1,19 +1,26 @@
 {
-    "networking":{
-      "allowedIpRanges":["AzureFrontDoor.Backend"]
+  "$schema": "https://aka.ms/json-schemas/azure/staticwebapps/config",
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "networking": {
+    "allowedIpRanges": ["AzureFrontDoor.Backend"]
+  },
+  "forwardingGateway": {
+    "requiredHeaders": {
+      "X-Azure-FDID": "de2b4435-3f33-4deb-a323-66dd473fb4b2"
     },
-    "forwardingGateway": {
-      "requiredHeaders": {
-        "X-Azure-FDID" : "de2b4435-3f33-4deb-a323-66dd473fb4b2"
-      }
-    },
-    "routes": [
-        {
-            "route": "/members",
-            "allowedRoles": ["authenticated", "members"],
-            "headers": {
-                "Cache-Control": "no-store"
-            }
-        }
+    "allowedForwardedHosts": [
+      "Shtfded-Ejhnfdame6fhg5gc.b01.azurefd.net"
     ]
+  },
+  "routes": [
+    {
+      "route": "/members",
+      "allowedRoles": ["authenticated", "members"],
+      "headers": {
+        "Cache-Control": "no-store"
+      }
+    }
+  ]
 }
